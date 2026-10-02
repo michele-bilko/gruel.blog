@@ -1,5 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
+import { Suspense } from "react";
 import Stars from "@/components/Stars";
 
 export const metadata = {
@@ -12,7 +13,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="page">
-          <Stars />
+          <Suspense fallback={null}>
+            <Stars />
+          </Suspense>
           <div className="site-title">
             <Link href="/">gruel.blog</Link>
           </div>
