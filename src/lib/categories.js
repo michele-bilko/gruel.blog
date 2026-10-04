@@ -29,7 +29,7 @@ export const CATEGORIES = {
     slug: "real-life-things",
     label: "real life things",
     color: "var(--reallife)",
-    subcategories: [],
+    subcategories: ["boston", "new york"],
   },
 };
 

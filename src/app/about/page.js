@@ -25,7 +25,7 @@ export default function AboutPage() {
         <h2>Masthead</h2>
         <div className="masthead">
           <div className="masthead-person">
-            <div className="name">Yasmin Hamilton (she/they)</div>
+            <div className="name">Yasmin Hamilton</div>
             <div className="role">editor</div>
             <div className="bio">bio</div>
           </div>
