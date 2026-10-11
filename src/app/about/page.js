@@ -12,7 +12,7 @@ export default function AboutPage() {
           <li>
             Ludditism. In a more nuanced sense, rejection of the
             commercialization and therefore flattening of artistic
-            expression and consumption.
+            expression and consumption!
           </li>
           <li>
             For intentional listeners, writers, readers, and enjoyers by
