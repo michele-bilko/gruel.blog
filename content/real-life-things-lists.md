@@ -23,14 +23,18 @@ Ideally, this website makes you want to get offline and get out to shows, movies
 
 # boston
 
-## subcategory
+## art studios
 
-- list item 1
-- list item 2
-- list item 3
+- middleway art house (https://middlewayart.house)
 
 # seattle
 
 # nyc
+
+## subcategory
+
+- list item 1 ()
+- list item 2
+- list item 3
 
 # wmass
