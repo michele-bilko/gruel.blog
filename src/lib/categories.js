@@ -33,6 +33,12 @@ export const CATEGORIES = {
     // content/real-life-things-lists.md (articles use a city as subcategory)
     subcategories: [],
   },
+  "print-matter": {
+    slug: "print-matter",
+    label: "print matter",
+    color: "var(--print)",
+    subcategories: [],
+  },
 };
 
 export const ABOUT = {
