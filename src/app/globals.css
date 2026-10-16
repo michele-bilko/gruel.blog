@@ -51,7 +51,7 @@ a {
 }
 
 .site-title a {
-  font-size: 2.1rem;
+  font-size: 2.35rem;
   font-weight: 500;
   color: var(--about);
 }
@@ -66,14 +66,14 @@ a {
 .nav-row {
   display: flex;
   justify-content: center;
-  gap: 48px;
+  gap: 16px 60px;
   padding: 12px 16px;
   flex-wrap: wrap;
 }
 
 .nav-row a,
 .nav-row span {
-  font-size: 1.05rem;
+  font-size: 1.4rem;
   font-weight: 500;
   transition: opacity 0.15s ease;
 }
@@ -97,7 +97,7 @@ a {
 }
 
 .subnav-row a {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
@@ -121,7 +121,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; /* FIX MAKING PAGES BIGGER FINALLY */
+  bottom: 0; /* same height as .page, so stars can never make the page taller */
   overflow: hidden;
   pointer-events: none;
   z-index: 0;
@@ -269,7 +269,7 @@ a {
 
 /*  real life things  */
 .real-life-intro p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   text-align: justify;
   margin: 0 0 16px;
@@ -285,7 +285,7 @@ a {
 
 .city summary {
   color: var(--reallife);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   cursor: pointer;
   list-style: none;
   padding: 6px 0;
@@ -306,7 +306,7 @@ a {
 
 .city-subcategory h3 {
   color: #f6d3e4;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   font-weight: 400;
   margin: 8px 0;
 }
@@ -314,7 +314,7 @@ a {
 .city-body ul {
   margin: 0 0 16px;
   padding-left: 76px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
 }
 
@@ -346,6 +346,10 @@ a {
   .subnav-row {
     gap: 20px;
   }
+  .nav-row a,
+  .nav-row span {
+    font-size: 1.2rem;
+  }
   .article-row {
     grid-template-columns: 70px 1fr;
   }
@@ -354,6 +358,10 @@ a {
   }
   .content {
     padding: 24px 20px 60px;
+  }
+  .real-life-intro p {
+    font-size: 1.15rem;
+    text-align: left;
   }
   .city-body {
     padding-left: 16px;
