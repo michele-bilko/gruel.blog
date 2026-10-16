@@ -25,7 +25,7 @@ Ideally, this website makes you want to get offline and get out to shows, movies
 
 ## art studios
 
-- middleway art house (https://middlewayart.house)
+- [middleway art house](https://middlewayart.house)
 
 # seattle
 
