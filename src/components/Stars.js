@@ -13,7 +13,7 @@ const STAR_IMAGES = [
   "/images/stars/star-yellow.png",
 ];
 
-const ROW_HEIGHT = 170; // vertical spacing between stars, per side
+const ROW_HEIGHT = 110; // vertical spacing between stars, per side (lower = more stars)
 const LEFT_PCTS = [4, 10];
 const RIGHT_PCTS = [4, 10];
 
@@ -32,6 +32,7 @@ const PROTECTED_SELECTOR = [
   ".article-image",
   ".article-body",
   ".about",
+  ".real-life",
   ".empty-note",
   ".footer",
 ].join(", ");
@@ -40,8 +41,10 @@ function randomImage() {
   return STAR_IMAGES[Math.floor(Math.random() * STAR_IMAGES.length)];
 }
 
-function buildColumn(startTop, pageHeight, pcts) {
-  const rows = Math.max(0, Math.ceil((pageHeight - startTop) / ROW_HEIGHT));
+// only rows whose whole star fits above `bottom` (stars hanging past it used
+// to stretch the page, which then added even more stars on the next resize)
+function buildColumn(startTop, bottom, pcts) {
+  const rows = Math.max(0, Math.floor((bottom - startTop - STAR_SIZE) / ROW_HEIGHT) + 1);
   const stars = [];
   for (let row = 0; row < rows; row++) {
     stars.push({
@@ -92,11 +95,16 @@ export default function Stars() {
       const nav = document.querySelector(".nav");
       if (!nav) return;
       const navBottom = nav.getBoundingClientRect().bottom + window.scrollY;
-      const pageHeight = document.documentElement.scrollHeight;
+      // stop at the top of the footer, not the page's scroll height (which
+      // includes the stars themselves)
+      const footer = document.querySelector(".footer");
+      const bottom = footer
+        ? footer.getBoundingClientRect().top + window.scrollY
+        : document.body.offsetHeight;
       const viewportWidth = window.innerWidth;
 
-      const rawLeft = buildColumn(navBottom + 30, pageHeight, LEFT_PCTS);
-      const rawRight = buildColumn(navBottom + 10, pageHeight, RIGHT_PCTS);
+      const rawLeft = buildColumn(navBottom + 30, bottom, LEFT_PCTS);
+      const rawRight = buildColumn(navBottom + 10, bottom, RIGHT_PCTS);
       const protectedRects = getProtectedRects();
 
       setColumns({
