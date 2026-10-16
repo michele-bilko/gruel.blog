@@ -1,12 +1,24 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
+import RealLifeThings from "@/components/RealLifeThings";
 import { getCategory } from "@/lib/categories";
 import { getAllArticles } from "@/lib/content";
 
 export default function CategoryPage({ params, searchParams }) {
   const category = getCategory(params.category);
   if (!category) notFound();
+
+  if (category.slug === "real-life-things") {
+    return (
+      <>
+        <Nav activeSlug={category.slug} />
+        <div className="content">
+          <RealLifeThings category={category} />
+        </div>
+      </>
+    );
+  }
 
   const activeSub = searchParams?.sub;
   const articles = getAllArticles(category.slug, activeSub);

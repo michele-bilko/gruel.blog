@@ -265,6 +265,70 @@ a {
   text-decoration: underline;
 }
 
+/*  real life things  */
+.real-life-intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0 0 16px;
+}
+
+.real-life-intro a {
+  color: var(--about);
+}
+
+.real-life a:hover {
+  text-decoration: underline;
+}
+
+.city summary {
+  color: var(--reallife);
+  font-size: 1.4rem;
+  cursor: pointer;
+  list-style: none;
+  padding: 6px 0;
+  width: fit-content;
+}
+
+.city summary::-webkit-details-marker {
+  display: none;
+}
+
+.city summary:hover {
+  opacity: 0.75;
+}
+
+.city-body {
+  padding: 4px 0 20px 36px;
+}
+
+.city-subcategory h3 {
+  color: #f6d3e4;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 8px 0;
+}
+
+.city-body ul {
+  margin: 0 0 16px;
+  padding-left: 76px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.city-body li a {
+  color: var(--reallife);
+}
+
+.city-body .empty-note {
+  padding: 0;
+  margin: 4px 0;
+}
+
+.city-body .muted {
+  color: var(--muted);
+}
+
 /*  footer  */
 .footer {
   text-align: center;
@@ -288,5 +352,11 @@ a {
   }
   .content {
     padding: 24px 20px 60px;
+  }
+  .city-body {
+    padding-left: 16px;
+  }
+  .city-body ul {
+    padding-left: 32px;
   }
 }

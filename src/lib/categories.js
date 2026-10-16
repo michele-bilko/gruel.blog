@@ -29,7 +29,9 @@ export const CATEGORIES = {
     slug: "real-life-things",
     label: "real life things",
     color: "var(--reallife)",
-    subcategories: ["boston", "new york"],
+    // no subnav bar here: the cities and their lists live in
+    // content/real-life-things-lists.md (articles use a city as subcategory)
+    subcategories: [],
   },
 };
 

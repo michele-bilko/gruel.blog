@@ -74,8 +74,11 @@ SECTIONS = {
         "folder": "real-life-things",
         "subcat_column": "Real Life Things Subcategory",
         "subcategories": {
+            # values must match a "# city" line in content/real-life-things-lists.md
             "boston": "boston",
-            "nyc": "new york",
+            "seattle": "seattle",
+            "nyc": "nyc",
+            "wmass": "wmass",
         },
     },
     "review": {
