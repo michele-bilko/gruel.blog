@@ -203,11 +203,26 @@ a {
 .article-body {
   font-size: 1rem;
   line-height: 1.7;
-  max-width: 72ch;
+}
+
+.article-header,
+.article-subtitle,
+.article-body {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .article-body p {
   margin: 0 0 20px;
+}
+
+.article-body a {
+  color: lightpink;
+}
+
+.article-body a:hover {
+  opacity: 0.75;
 }
 
 .article-body blockquote {
